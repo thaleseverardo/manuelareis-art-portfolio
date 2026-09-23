@@ -23,4 +23,4 @@ O formato baseia-se em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0
 - Centralização declarativa do catálogo de projetos no arquivo `js/projects-data.js`.
 - Desacoplamento da camada de renderização e controle de carrosséis e modais dinâmicos em `js/javascript.js`.
 - Eliminação de dependência do jQuery com migração para Bootstrap 5.3 nativo.
-- Suporte a compressão Gzip e cache de 30 dias para ativos estáticos no `nginx.conf`.\n
+- Suporte a compressão Gzip e cache de 30 dias para ativos estáticos no `nginx.conf`.

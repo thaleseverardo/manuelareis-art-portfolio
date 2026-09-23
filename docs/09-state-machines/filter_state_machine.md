@@ -19,4 +19,4 @@ stateDiagram-v2
         [*] --> RemoveDisplayNone: Remove classe d-none de todos os cards
         RemoveDisplayNone --> [*]
     }
-```\n
+```

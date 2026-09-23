@@ -21,4 +21,4 @@ mindmap
       Compressão de Payload via Gzip
       Cache HTTP Estático com Expiração Estendida
       Isolamento em Contêiner Docker Não-Root/Alpine
-```\n
+```

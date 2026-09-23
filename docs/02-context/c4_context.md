@@ -33,4 +33,4 @@ flowchart TD
     App -->|Embarca Modelos Interativos via iFrame| Sketchfab
     App -->|Aciona envio de mensagem| EmailClient
     App -->|Links e Compartilhamento Web Share/QR| Social
-```\n
+```

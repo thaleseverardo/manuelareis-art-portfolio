@@ -10,4 +10,4 @@ A arquitetura sendo estática concentra sua observabilidade no gateway Nginx e n
 ## 14.2 Métricas de Experiência do Cliente (Core Web Vitals)
 * **LCP (Largest Contentful Paint):** Monitoramento das imagens de capa no carrossel inicial.
 * **FID / INP:** Tempo de resposta na alternância de filtros e abertura de modais.
-* **CLS (Cumulative Layout Shift):** Garantido em 0 através do uso de classes de proporção nativas (`ratio ratio-16x9`).\n
+* **CLS (Cumulative Layout Shift):** Garantido em 0 através do uso de classes de proporção nativas (`ratio ratio-16x9`).

@@ -35,4 +35,4 @@ classDiagram
 * `sketchfabId` (*string, opcional*): Hash do modelo no Sketchfab para carregamento em WebGL.
 * `videos` (*array de URLs, opcional*): Mídias em formato MP4.
 * `images` (*array de URLs, opcional*): Renders detalhados e peças de apresentação.
-* `conceptCredit` (*object, opcional*): Objeto de crédito para artistas conceituais 2D.\n
+* `conceptCredit` (*object, opcional*): Objeto de crédito para artistas conceituais 2D.

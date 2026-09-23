@@ -14,4 +14,4 @@
 ├── Dockerfile                 # Especificação de build OCI (Nginx Alpine)
 ├── docker-compose.yml         # Orquestração local e mapeamento de volumes
 └── index.html                 # Shell semântico e pontos de montagem
-```\n
+```

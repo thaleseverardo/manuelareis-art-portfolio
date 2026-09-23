@@ -24,4 +24,4 @@ mindmap
       Custo Quase Zero de Operação
       Entrega Estática Contêinerizada
       Separação entre Dados e Apresentação
-```\n
+```

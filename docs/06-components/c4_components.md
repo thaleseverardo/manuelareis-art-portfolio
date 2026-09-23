@@ -26,4 +26,4 @@ flowchart TD
     Controller -->|Instancia| CarouselComp
     Controller -->|Gera estrutura| ModalComp
     Filters -->|Alterna classes d-none| GalleryCards
-```\n
+```

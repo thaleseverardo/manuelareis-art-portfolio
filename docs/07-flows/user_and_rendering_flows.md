@@ -42,4 +42,4 @@ sequenceDiagram
         UI->>ClipAPI: navigator.clipboard.writeText(url)
         ClipAPI-->>User: Alerta 'Link copied to clipboard!'
     end
-```\n
+```
