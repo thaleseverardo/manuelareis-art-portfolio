@@ -1,0 +1,32 @@
+name: CI / Architectural Governance
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit-and-validate:
+    runs-on: ubuntu-latest
+    name: Lint, Test Contracts & Audit Documentation
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify Architecture Documentation (Pyramid Check)
+        run: |
+          python3 validate_docs.py
+
+      - name: Run Schema Contract Tests
+        run: |
+          python3 tests/test_schema.py
+
+      - name: Validate Nginx Configuration Syntax
+        run: |
+          docker run --rm -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro nginx:alpine-slim nginx -t\n

@@ -1,2301 +1,397 @@
 <!doctype html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manuela Reis - 3D Character &amp; Creature Artist</title>
+    <meta name="description" content="Portfolio of Manuela Reis - 3D Character and Creature Artist for games, films, and real-time experiences.">
     
-    <title>www.manuelareis.com</title>
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/theme.css">
+
+    <!-- Projects Data & Logic -->
+    <script src="js/projects-data.js"></script>
     <script src="js/javascript.js"></script>
-
   </head>
-   <body>
+  <body>
 
-
-
-
-
-
-    
-    <!-- PAGE TOP -->
-    <div>
-      <div class="row fixed-top p-0 p-md-0 mg-0 mg-md-0">
-        <div class="d-flex flex-row px-4 py-1 bg-dark">
-          
-          <div class="d-flex flex-grow-1 p-0 p-md-0">
-            <img class="img-fluid col-7 col-md-3" src="img\ManuelaReisLogo.svg" alt="manuelareis.com">
-          </div>
-
-          <div class="d-flex flex-column p-0 p-md-0 px-2 px-md-3">
-              <div class="d-flex flex-row theme-menu-item align-items-center" type="button" data-toggle="modal" data-target="#modal_demoreel" title="Watch a demo reel">
-                <span class="d-none d-md-block px-3 p-0 mg-0 fs-4">Watch demo reel</span>
-                <span class="bi bi-play-circle-fill p-0 mg-0 fs-2" style="color: #ffc107;"></span>
-              </div>
-          </div>
-
-          <div class="d-md-none dropdown">
-            <a class="p-0 mg-0" href="#" role="button" data-toggle="dropdown">
-              <i class="bi bi-list fs-2 px-3 mg-0 theme-menu-item"></i>
-            </a>
-            <ul class="dropdown-menu text-end fw-semibold bg-dark">
-              <li class="mg-0 py-2 px-3"><a href="javascript:void(0);"   onclick="scrollToElement('strip_gallery', 120);"        class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">gallery</a></li>
-              <li class="mg-0 py-2 px-3"><a href="javascript:void(0);"   onclick="scrollToElement('strip_publishedgames', 120);" class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">published games</a></li>
-              <li class="mg-0 py-2 px-3"><a href="javascript:void(0);"   onclick="scrollToElement('strip_services', 120);"       class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">services</a></li>
-              <li class="mg-0 py-2 px-3"><a href="javascript:void(0);"   onclick="scrollToElement('strip_aboutme', 120);"        class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">about</a></li>
-              <li class="mg-0 py-2 px-3"><a href="javascript:void(0);"   onclick="scrollToElement('strip_links', 120);"          class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">links</a></li>
-              <li class="mg-0 py-2 px-3"><a href="javascript:void(0);"   onclick="scrollToElement('strip_contact', 120);"        class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">contact</a></li>
-              <li class="mg-0 py-2 px-3"><a href="https://www.manuelareis.com/nda" target="_blank"                               class="mg-0 p-0 theme-menu-item fs-6 text-decoration-none">NDA</a></li>
-            </ul>
-          </div>
-
+    <!-- NAVBAR HEADER -->
+    <header class="fixed-top p-0 mg-0">
+      <div class="d-flex flex-row px-4 py-1 bg-dark align-items-center">
+        <div class="d-flex flex-grow-1 p-0">
+          <img class="img-fluid col-7 col-md-3" src="img/ManuelaReisLogo.svg" alt="manuelareis.com">
         </div>
 
-        <div class="d-none d-md-block d-flex flex-wrap flex-grow-1 text-end py-md-1 px-md-5 mx-2 fw-semibold theme-menu-bg">
-          <a href="javascript:void(0);"   onclick="scrollToElement('strip_gallery', 120);"        class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">gallery</a>
-          <a href="javascript:void(0);"   onclick="scrollToElement('strip_publishedgames', 120);" class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">published games</a>
-          <a href="javascript:void(0);"   onclick="scrollToElement('strip_services', 120);"       class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">services</a>
-          <a href="javascript:void(0);"   onclick="scrollToElement('strip_aboutme', 120);"        class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">about</a>
-          <a href="javascript:void(0);"   onclick="scrollToElement('strip_links', 120);"          class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">links</a>
-          <a href="javascript:void(0);"   onclick="scrollToElement('strip_contact', 120);"        class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">contact</a>
-          <a href="https://www.manuelareis.com/nda" target="_blank" class="mx-2 p-1 px-md-2 link-offset-3 theme-menu-item fs-6 fs-md-6 link-underline-opacity-0 link-underline-opacity-75-hover link-underline-warning">NDA</a>
+        <div class="d-flex flex-column px-2 px-md-3">
+          <button type="button" class="btn p-0 d-flex flex-row theme-menu-item align-items-center border-0" data-bs-toggle="modal" data-bs-target="#modal_demoreel" title="Watch a demo reel">
+            <span class="d-none d-md-block px-3 p-0 fs-4">Watch demo reel</span>
+            <span class="bi bi-play-circle-fill p-0 fs-2" style="color: #ffc107;"></span>
+          </button>
         </div>
-      
+
+        <!-- Mobile Dropdown -->
+        <div class="d-md-none dropdown">
+          <button class="btn p-0 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-2 px-3 theme-menu-item"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end text-end fw-semibold bg-dark">
+            <li class="py-2 px-3"><a href="javascript:void(0);" onclick="scrollToElement('strip_gallery', 120);" class="theme-menu-item fs-6 text-decoration-none">gallery</a></li>
+            <li class="py-2 px-3"><a href="javascript:void(0);" onclick="scrollToElement('strip_publishedgames', 120);" class="theme-menu-item fs-6 text-decoration-none">published games</a></li>
+            <li class="py-2 px-3"><a href="javascript:void(0);" onclick="scrollToElement('strip_services', 120);" class="theme-menu-item fs-6 text-decoration-none">services</a></li>
+            <li class="py-2 px-3"><a href="javascript:void(0);" onclick="scrollToElement('strip_aboutme', 120);" class="theme-menu-item fs-6 text-decoration-none">about</a></li>
+            <li class="py-2 px-3"><a href="javascript:void(0);" onclick="scrollToElement('strip_links', 120);" class="theme-menu-item fs-6 text-decoration-none">links</a></li>
+            <li class="py-2 px-3"><a href="javascript:void(0);" onclick="scrollToElement('strip_contact', 120);" class="theme-menu-item fs-6 text-decoration-none">contact</a></li>
+            <li class="py-2 px-3"><a href="https://www.manuelareis.com/nda" target="_blank" rel="noopener" class="theme-menu-item fs-6 text-decoration-none">NDA</a></li>
+          </ul>
+        </div>
       </div>
-      
 
-      <div class="row col-12 mx-0 mx-md-2 my-2 py-3 my-md-3 py-md-5"></div>
-      
-    </div>
-    <!-- PAGE TOP -->
+      <!-- Desktop Nav -->
+      <nav class="d-none d-md-block text-end py-md-1 px-md-5 mx-2 fw-semibold theme-menu-bg">
+        <a href="javascript:void(0);" onclick="scrollToElement('strip_gallery', 120);" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">gallery</a>
+        <a href="javascript:void(0);" onclick="scrollToElement('strip_publishedgames', 120);" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">published games</a>
+        <a href="javascript:void(0);" onclick="scrollToElement('strip_services', 120);" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">services</a>
+        <a href="javascript:void(0);" onclick="scrollToElement('strip_aboutme', 120);" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">about</a>
+        <a href="javascript:void(0);" onclick="scrollToElement('strip_links', 120);" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">links</a>
+        <a href="javascript:void(0);" onclick="scrollToElement('strip_contact', 120);" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">contact</a>
+        <a href="https://www.manuelareis.com/nda" target="_blank" rel="noopener" class="mx-2 p-1 link-offset-3 theme-menu-item fs-6 text-decoration-none">NDA</a>
+      </nav>
+    </header>
 
+    <!-- SPACER -->
+    <div class="row col-12 mx-0 my-2 py-3 my-md-3 py-md-5"></div>
 
-    
+    <main>
+      <!-- GALLERY SECTION -->
+      <section id="strip_gallery" class="d-flex flex-row justify-content-center pb-5">
+        <div class="d-flex flex-column col-12 col-md-10">
+          
+          <!-- Filter Controls -->
+          <div class="d-flex flex-row py-3 py-md-4 justify-content-center">
+            <div class="d-flex flex-column px-2 px-md-3">
+              <div class="flex-grow-1 theme-toggle-bt-title">CHARACTERS</div>
+              <div class="d-flex flex-row theme-toggle-bt" role="group">
+                <input type="checkbox" class="btn-check theme-toggle-bt theme-toggle-filter" id="CHA_REAL" data-filter="CHA_REAL" autocomplete="off" checked>
+                <label class="fs-6 px-2 py-2 theme-toggle-bt" for="CHA_REAL">#Realistic</label>
 
+                <input type="checkbox" class="btn-check theme-toggle-bt theme-toggle-filter" id="CHA_STY" data-filter="CHA_STY" autocomplete="off" checked>
+                <label class="fs-6 px-2 py-2 theme-toggle-bt" for="CHA_STY">#Stylized</label>
+              </div>
+            </div>
 
+            <div class="d-flex flex-column px-2 px-md-3">
+              <div class="flex-grow-1 theme-toggle-bt-title">PROPS</div>
+              <div class="d-flex flex-row" role="group">
+                <input type="checkbox" class="btn-check theme-toggle-bt theme-toggle-filter" id="PRO_REAL" data-filter="PRO_REAL" autocomplete="off" checked>
+                <label class="fs-6 px-2 py-2 theme-toggle-bt" for="PRO_REAL">#Realistic</label>
 
+                <input type="checkbox" class="btn-check theme-toggle-bt theme-toggle-filter" id="PRO_STY" data-filter="PRO_STY" autocomplete="off" checked>
+                <label class="fs-6 px-2 py-2 theme-toggle-bt" for="PRO_STY">#Stylized</label>
+              </div>
+            </div>
+          </div>
 
+          <!-- Dynamic Projects Cards Outlet -->
+          <div id="gallery-items-container" class="d-flex flex-wrap"></div>
+        </div>
+      </section>
 
-
-    <!-- Gallery -->
-    <div
-        id="strip_gallery"
-        class="d-flex flex-row justify-content-center pb-5 pb-md-5">
-
+      <!-- PUBLISHED GAMES -->
+      <section id="strip_publishedgames" class="d-flex flex-row justify-content-center py-5">
         <div class="d-flex flex-column col-12 col-md-10 theme-strip-shadow">
-
-            <div
-                class="d-flex flex-row py-3 py-md-4 justify-content-center">
-                
-                    <!-- CONTENT SELECTOR -->
-
-                      <div class="d-flex flex-column px-2 px-md-3">
-                        <div class="flex-grow-1 theme-toggle-bt-title">CHARACTERS</div>
-                        <div class="d-flex flex-row theme-toggle-bt" role="group">
-                            
-                            <input type="checkbox" class="btn-check theme-toggle-bt" id="CHA_REAL" autocomplete="off" data-toggle="collapse" data-target=".CHA_REAL" checked>
-                            <label class="fs-6 fs-md-6 px-2 px-md-2 py-2 py-md-2 theme-toggle-bt" for="CHA_REAL">#Realistic</label>
-                
-                            <input type="checkbox" class="btn-check theme-toggle-bt" id="CHA_STY" autocomplete="off" data-toggle="collapse" data-target=".CHA_STY" checked>
-                            <label class="fs-6 fs-md-6 px-2 px-md-2 py-2 py-md-2 theme-toggle-bt"  for="CHA_STY">#Stylized</label>
-                
-                          </div>
-                      </div>
-                        
-                      <div class="d-flex flex-column px-2 px-md-3">
-                        <div class="flex-grow-1 theme-toggle-bt-title">PROPS</div>
-                        <div class="d-flex flex-row" role="group">
-                            
-                            <input type="checkbox" class="btn-check theme-toggle-bt" id="PRO_REAL" autocomplete="off" data-toggle="collapse" data-target=".PRO_REAL" checked>
-                            <label class="fs-6 fs-md-6 px-2 px-md-2 py-2 py-md-2 theme-toggle-bt"  for="PRO_REAL">#Realistic</label>
-                
-                            <input type="checkbox" class="btn-check theme-toggle-bt" id="PRO_STY" autocomplete="off" data-toggle="collapse" data-target=".PRO_STY" checked>
-                            <label class="fs-6 fs-md-6 px-2 px-md-2 py-2 py-md-2 theme-toggle-bt"  for="PRO_STY">#Stylized</label>
-                
-                          </div>
-                      </div>
-
-                    <!-- CONTENT SELECTOR -->
-
+          <div class="d-flex flex-row py-2 theme-strip-title fs-2 justify-content-center align-items-center">
+            <i class="bi bi-controller"></i>
+            <h2 class="mx-4 mb-0 fs-2">Published Games</h2>
+          </div>
+          <div class="d-flex flex-row theme-strip-body fs-6 justify-content-center text-center">
+            <div class="d-flex flex-column py-5 col-12">
+              <div class="d-flex flex-wrap justify-content-around mx-0 px-0 col-12 text-center mb-4">
+                <div class="col-11 col-md-5 mt-3">
+                  <a href="https://store.steampowered.com/app/2121610/The_Events_at_Unity_Farm/" target="_blank" rel="noopener noreferrer">
+                    <img class="img-fluid rounded" src="img/header_jpg_t=1686837177.webp" alt="The Events at Unity Farm on Steam">
+                  </a>
+                </div>
+                <div class="col-11 col-md-5 mt-3">
+                  <a href="https://play.google.com/store/apps/details?id=com.funkidsapp.funkids&amp;hl=en_CA&amp;pli=1" target="_blank" rel="noopener noreferrer">
+                    <img class="img-fluid rounded" src="img/298620253_507098951259971_2968673584041266772_n.webp" alt="Fun Kids Game">
+                  </a>
+                </div>
+              </div>
             </div>
-
-
-
-            <div class="d-flex flex-wrap">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
-              <!-- Ginger elf -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_REAL show"> 
-
-                <div id="proj-001">
-        
-                  <div id="carousel_001" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-001-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item"><img class="d-block w-100 img-fluid rounded" src="https://cdna.artstation.com/p/assets/images/images/052/615/508/medium/manuela-reis-j67.jpg?1660238539" alt="#1" ></div>
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://cdna.artstation.com/p/assets/images/images/052/615/498/medium/manuela-reis-j65.jpg?1660238511" alt="#2" ></div>
-                      <div class="ratio ratio-16x9 carousel-item active">       <img class="d-block w-100 img-fluid rounded" src="projects/001/manuela-reis-j53[1].png" alt="#3" ></div>
-                    </div>
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-001" style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                       <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Ginger elf">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Ginger elf</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev" href="#carousel_001" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next" href="#carousel_001" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                 
-                </div>
-        
-              </div>
-              <!-- Ginger elf -->
-
-
-
-
-
-
-
-
-              <!-- Horror Angel -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_REAL show"> 
-
-                <div id="proj-007">
-        
-                  <div id="carousel_002" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-002-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://cdna.artstation.com/p/assets/images/images/042/138/942/medium/manuela-reis-oi.jpg?1633672267" alt="#3" ></div>
-                      <div class="ratio ratio-16x9 carousel-item active"><img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_1495036a7b64463c84a66108aa1341ce~mv2.png/v1/fill/w_740,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aaea0a_1495036a7b64463c84a66108aa1341ce~mv2.png" alt="#1" > </div>
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://cdna.artstation.com/p/assets/images/images/042/138/944/medium/manuela-reis-oi-001.jpg?1633672275" alt="#2" ></div>
-                  </div>
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-002"  style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                        <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Horror Angel">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Horror Angel</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev" href="#carousel_002" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next" href="#carousel_002" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                                      
-                </div>
-        
-              </div>
-              <!-- Horror Angel -->
-
-
-
-
-
-
-
-
-
-               <!-- Cindy the centaur -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_STY show"> 
-
-                <div id="proj-003">
-        
-                  <div id="carousel_003" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-003-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item"><img class="d-block w-100 img-fluid rounded" src="https://cdnb.artstation.com/p/assets/images/images/053/003/359/medium/manuela-reis-bla-004.jpg?1661193141" alt="#1" > </div>
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://cdna.artstation.com/p/assets/images/images/042/140/048/medium/manuela-reis-bla-001.jpg?1633676660" alt="#2"></div>
-                      <div class="ratio ratio-16x9 carousel-item active">       <img class="d-block w-100 img-fluid rounded" src="https://cdnb.artstation.com/p/assets/images/images/032/961/673/medium/manuela-reis-screenshot023.jpg?1607992866" alt="#3"></div>
-                    </div>
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)"  data-toggle="modal" data-target="#modal_proj-003"  style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                       <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Cindy the centaur">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Cindy the centaur</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev" href="#carousel_003" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next" href="#carousel_003" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                                     
-                </div>
-        
-              </div>
-               <!-- Cindy the centaur -->
-
-
-
-
-
-
-
-
-
-              <!-- Xgen Hair -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_REAL show"> 
-
-                <div id="proj-004">
-        
-                  <div id="carousel_004" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-004-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item active"><img class="d-block w-100 img-fluid rounded" src="projects/004/aaea0a_2a5c593e3baf4fb98f635adb8e5a6551~mv2[1].png" alt="#1"></div>
-                    </div>
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-004" style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                       <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Xgen Hair">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Xgen Hair</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev invisible" href="#carousel_004" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next invisible" href="#carousel_004" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                        
-                  </div>
-                    
-                </div>
-        
-              </div>
-              <!-- Xgen Hair -->
-
-
-
-
-
-
-
-              <!-- Cloth Simulation -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_REAL show"> 
-
-                <div id="proj-005">
-        
-                  <div id="carousel_005" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-005-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_34d3c188887040eb98d9e90f9a67f819~mv2.png/v1/fill/w_671,h_1073,al_c,q_90,enc_auto/aaea0a_34d3c188887040eb98d9e90f9a67f819~mv2.png" alt="#3"></div>
-                      <div class="ratio ratio-16x9 carousel-item active"><img class="d-block w-100 img-fluid rounded" src="projects/005/aaea0a_e2e85a50929d42e6bd34aab244c30273~mv2[1].png" alt="#1"> </div>
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_7aa407b9d01b41d9aef337c61844f091~mv2.png/v1/fill/w_725,h_1126,al_c,q_90,enc_auto/aaea0a_7aa407b9d01b41d9aef337c61844f091~mv2.png" alt="#2"></div>
-                  </div>
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-005"  style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                        <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Cloth Simulation">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Cloth Simulation</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev" href="#carousel_005" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next" href="#carousel_005" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                    
-                </div>
-        
-              </div>
-              <!-- Cloth Simulation -->
-
-
-
-
-
-
-
-
-
-               <!-- Jacks' House -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse PRO_STY show"> 
-
-                <div id="proj-006">
-        
-                  <div id="carousel_006" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-006-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item active"><img class="d-block w-100 img-fluid rounded" src="projects/006/aaea0a_eb95a08f87764fba9c386e8ebe45d659~mv2[1].png" alt="#1"> </div>
-                    </div>       
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-006"  style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                       <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Jacks' House">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Jacks' House</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev invisible" href="#carousel_006" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next invisible" href="#carousel_006" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                    
-                </div>
-        
-              </div>
-               <!-- Jacks' House -->
-
-
-
-
-
-
-
-
-
-
-
-
-              <!-- Devil Stylized Girl -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_STY show"> 
-
-                <div id="proj-007">
-        
-                  <div id="carousel_007" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-007-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item active"><img class="d-block w-100 img-fluid rounded" src="projects/007/9ba0d8192618193.65debd2b3933e.png" alt="#1"></div>
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_76e022e87eda41d0a19ae533e6413b06~mv2.png/v1/fill/w_740,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/aaea0a_76e022e87eda41d0a19ae533e6413b06~mv2.png" alt="#2"></div>
-                      <div class="ratio ratio-16x9 carousel-item">       <img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_7a2fd5e03db643549e97ab833de4a5c5~mv2.png" alt="#3"></div>
-                    </div>
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-007"  style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                       <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title" title="Devil Stylized Girl">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Devil Stylized Girl</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev" href="#carousel_007" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next" href="#carousel_007" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                    
-                </div>
-        
-              </div>
-              <!-- Devil Stylized Girl -->
-
-
-
-
-
-
-
-              <!-- Yaglo -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse CHA_REAL show"> 
-
-                <div id="proj-008">
-        
-                  <div id="carousel_008" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-008-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item active">       <img class="d-block w-100 img-fluid rounded" src="projects/008/aaea0a_e8ad839690e947c7838b14a599642ae1~mv2.png" alt="#3"></div>
-                      <div class="ratio ratio-16x9 carousel-item "><img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_0bb96a7d800c44b69953a2f09fe56910~mv2_d_1215_1560_s_2.jpg/v1/fill/w_740,h_950,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aaea0a_0bb96a7d800c44b69953a2f09fe56910~mv2_d_1215_1560_s_2.jpg" alt="#1"> </div>
-                  </div>        
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-008" style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                        <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title"  type="button" title="Yaglo">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">Yaglo</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev" href="#carousel_008" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next" href="#carousel_008" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                    
-                </div>
-        
-              </div>
-              <!-- Yaglo -->
-
-
-
-
-
-
-
-
-               <!-- The visitor -->
-              <div class="col col-md-4 col-12 mx-0 px-0 px-md-2 my-2 my-md-2 collapse multi-collapse PRO_REAL show"> 
-
-                <div id="proj-009">
-        
-                  <div id="carousel_009" class="carousel" data-bs-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-                    <div id="proj-009-thumbnails" class="carousel-inner thumbnail-shadow">
-                      <div class="ratio ratio-16x9 carousel-item active"><img class="d-block w-100 img-fluid rounded" src="https://static.wixstatic.com/media/aaea0a_c8bbafd8ab78493fbc931e3458c9c74b~mv2.jpg" alt="#1"> </div>
-                    </div>
-
-       
-
-                    <div class="d-flex position-absolute top-0 start-0 w-100 h-100 theme-gallery-item-title" onclick="toggleIcon(this)" data-toggle="modal" data-target="#modal_proj-009" style="background: radial-gradient(circle, rgba(0,0,0,0) 36%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.865983893557423) 100%);">
-                      
-                       <button class="btn position-absolute bottom-0 start-50 translate-middle-x mb-0 col-12 col-md-12 px-3 px-md-3 py-1 py-md-1 mg-0 mg-md-0 theme-gallery-item-title"  title="The visitor">
-                          <div class="d-flex flex-row">
-                            <div>
-                              <i class="bi bi-plus-circle fs-5"></i>
-                            </div>
-                            <div class="flex-grow-1 fs-5 text-start px-2 px-md-2 text-truncate">The visitor</div>
-                          </div>
-                        </button> 
-                      
-                    </div>
-                    
-                    <a class="carousel-control-prev invisible" href="#carousel_009" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-                    <a class="carousel-control-next invisible" href="#carousel_009" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
-                      
-                  </div>
-                                     
-                </div>
-        
-              </div>
-               <!-- The visitor -->
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
+          </div>
         </div>
+      </section>
 
-    </div>
-    <!-- Gallery -->
+      <!-- SERVICES -->
+      <section id="strip_services" class="d-flex flex-row justify-content-center py-5">
+        <div class="d-flex flex-column col-12 col-md-10 theme-strip-shadow">
+          <div class="d-flex flex-row py-2 theme-strip-title fs-2 justify-content-center align-items-center">
+            <i class="bi bi-brush"></i>
+            <h2 class="mx-4 mb-0 fs-2">Services</h2>
+          </div>
+          <div class="d-flex flex-row theme-strip-body fs-6 justify-content-center">
+            <div class="d-flex flex-column py-5 col-10">
+              <div class="fw-lighter fs-6 text-break my-4 text-center">
+                Offering comprehensive art services encompassing meticulous planning, idea generation, adhering to scopes, and crafting exceptional characters and props tailored for gaming experiences.
+              </div>
+              <div class="d-flex flex-row justify-content-between flex-wrap text-center">
+                <div class="d-flex flex-column fw-lighter fs-6 py-3 px-2 col-md-4">
+                  <img class="img-fluid col-4 mx-auto mb-2" src="img/cra_cri_icon.svg" alt="Characters and creatures icon">
+                  <div class="fw-bolder fs-5">Characters / Creatures</div>
+                  <div class="mt-2">Initial sketching and sculpting to meticulous retopology and final product rendering or game engine integration.</div>
+                </div>
+                <div class="d-flex flex-column fw-lighter fs-6 py-3 px-2 col-md-4">
+                  <img class="img-fluid col-4 mx-auto mb-2" src="img/props_icon.svg" alt="Props and assets icon">
+                  <div class="fw-bolder fs-5">Props / Assets</div>
+                  <div class="mt-2">Hard surface modeling for armor, weapons, robots, vehicles, environment props, and captivating landscapes.</div>
+                </div>
+                <div class="d-flex flex-column fw-lighter fs-6 py-3 px-2 col-md-4">
+                  <img class="img-fluid col-4 mx-auto mb-2" src="img/poster_ico.svg" alt="Concepts and posters icon">
+                  <div class="fw-bolder fs-5">Concepts / Posters</div>
+                  <div class="mt-2">Art concepts for marketing, social media, events, key art, and mood setting visuals that captivate audiences.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- ABOUT -->
+      <section id="strip_aboutme" class="d-flex flex-row justify-content-center py-5">
+        <div class="d-flex flex-column col-12 col-md-10 theme-strip-shadow">
+          <div class="d-flex flex-row py-2 theme-strip-title fs-2 justify-content-center align-items-center">
+            <i class="bi bi-person-vcard"></i>
+            <h2 class="mx-4 mb-0 fs-2">About</h2>
+          </div>
+          <div class="d-flex flex-row theme-strip-body fs-6 justify-content-center">
+            <div class="d-flex flex-column py-5 col-10">
+              <div class="d-flex flex-wrap pb-4">
+                <div class="fw-bolder fs-4 my-4 col-12 px-3 theme-strip-title">PROFESSIONAL XP</div>
+                <div class="fw-lighter fs-6 py-3 px-3 text-light col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Character Artist</div>
+                  <div class="fs-5 text-secondary">TITAN1STUDIO, Toronto, Canada</div>
+                  <p class="mt-2">Creating human characters and creatures for 3D VR games. Production pipeline for hair, garments, and blend shapes for facial animation.</p>
+                </div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Game Designer / Developer</div>
+                  <div class="fs-5 text-secondary">FUNKIDS</div>
+                  <p class="mt-2">Designing and developing mobile educational games for kids.</p>
+                </div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Game Artist / Game Developer</div>
+                  <div class="fs-5 text-secondary">Avido</div>
+                  <p class="mt-2">Project structure planning, team management, 2D asset development, UI/UX design, and engine integration.</p>
+                </div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Volunteered</div>
+                  <div class="fs-5 text-secondary">WomanUp</div>
+                  <p class="mt-2">Empowering women in the game industry. Lectured workshops at Google Campus.</p>
+                </div>
 
+                <div class="fw-bolder fs-4 my-4 col-12 px-3 theme-strip-title">EDUCATION</div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Major in Game Art</div>
+                  <div class="fs-5">Centennial College, Toronto, Canada (2019/2020)</div>
+                </div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Digital Sculpture</div>
+                  <div class="fs-5">Melies - Digital Art College, São Paulo, Brazil (2016)</div>
+                </div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Major in Digital Games</div>
+                  <div class="fs-5">Cruzeiro do Sul University, São Paulo, Brazil (2013-2015)</div>
+                </div>
+                <div class="fw-lighter fs-6 py-3 px-3 col-md-6">
+                  <div class="fw-bolder fs-4 theme-strip-h1">Game Animation &amp; 3D Modeling</div>
+                  <div class="fs-5">Saga - School of Art, São Paulo, Brazil (2010-2013)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-
-
-
-
-
-
-
-<!-- modal_demoreel -->
-<div class="modal fade" id="modal_demoreel"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+      <!-- LINKS & CONTACT -->
+      <section class="d-flex flex-row justify-content-center p-0">
+        <div class="d-flex flex-wrap justify-content-between col-12 col-md-10 py-5">
+          <!-- Links -->
+          <div id="strip_links" class="d-flex flex-column col-12 col-md-6 py-3">
+            <div class="d-flex flex-column theme-strip-shadow">
+              <div class="d-flex flex-row py-2 theme-strip-title fs-2 justify-content-center align-items-center">
+                <i class="bi bi-link"></i>
+                <h2 class="mx-4 mb-0 fs-2">Links</h2>
+              </div>
+              <div class="d-flex flex-row theme-strip-body fs-6 justify-content-center">
+                <div class="d-flex flex-column col-12 col-md-10 px-4 py-4">
+                  <div class="d-flex flex-row align-items-center p-2">
+                    <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none bi bi-globe2 text-truncate" href="https://www.manuelareis.com/" target="_blank" rel="noopener"><span class="px-2">manuelareis.com</span></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill" href="javascript:void(0);" onclick="share('https://www.manuelareis.com/', 'Manuela Reis', 'Portfolio')" title="share"></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal_qrcode_manuelareis" title="scan QR code"></a>
+                  </div>
+                  <div class="d-flex flex-row align-items-center p-2">
+                    <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none bi bi-instagram" href="https://www.instagram.com/manuelareis.art/" target="_blank" rel="noopener"><span class="px-2">Instagram</span></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill" href="javascript:void(0);" onclick="share('https://www.instagram.com/manuelareis.art', 'Instagram', 'manuelareis.art')" title="share"></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal_qrcode_instagram" title="scan QR code"></a>
+                  </div>
+                  <div class="d-flex flex-row align-items-center p-2">
+                    <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none bi bi-linkedin" href="https://www.linkedin.com/in/manuelamreis/" target="_blank" rel="noopener"><span class="px-2">Linkedin</span></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill" href="javascript:void(0);" onclick="share('https://www.linkedin.com/in/manuelamreis/', 'LinkedIn', 'manuelamreis')" title="share"></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal_qrcode_linkedin" title="scan QR code"></a>
+                  </div>
+                  <div class="d-flex flex-row align-items-center p-2">
+                    <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none" href="https://www.artstation.com/manuelareis/" target="_blank" rel="noopener">
+                      <img src="img/icon_artstation.svg" alt="Artstation" width="17" height="17"><span class="px-2">Artstation</span>
+                    </a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill" href="javascript:void(0);" onclick="share('https://www.artstation.com/manuelareis', 'Artstation', 'manuelareis')" title="share"></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal_qrcode_artstation" title="scan QR code"></a>
+                  </div>
+                  <div class="d-flex flex-row align-items-center p-2">
+                    <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none" href="https://www.sketchfab.com/Manuela.Reis/" target="_blank" rel="noopener">
+                      <img src="img/scatchfab.svg" alt="Sketchfab" width="17" height="17"><span class="px-2">Sketchfab</span>
+                    </a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill" href="javascript:void(0);" onclick="share('https://www.sketchfab.com/Manuela.Reis/', 'Sketchfab', 'Manuela.Reis')" title="share"></a>
+                    <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal_qrcode_sketchfab" title="scan QR code"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-          
-            
-            <!-- film -->
-              <div id="film-003" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Demo reel</Span>
+          <!-- Contact -->
+          <div id="strip_contact" class="d-flex flex-column col-12 col-md-5 py-3">
+            <div class="d-flex flex-column theme-strip-shadow">
+              <div class="d-flex flex-row py-2 theme-strip-title fs-2 justify-content-center align-items-center">
+                <i class="bi bi-envelope"></i>
+                <h2 class="mx-4 mb-0 fs-2">Contact</h2>
               </div>
+              <div class="d-flex flex-row theme-strip-body fs-6 justify-content-center text-center">
+                <div class="d-flex flex-column py-5">
+                  <div class="p-2">manuelareis.art@gmail.com</div>
+                  <div class="p-3">
+                    <a class="bi bi-send fs-2 theme-menu-item text-decoration-none" href="mailto:manuelareis.art@gmail.com" aria-label="Send email"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source
-             src="https://video.wixstatic.com/video/aaea0a_02d7118148054a6abb864eb9489c20be/1080p/mp4/file.mp4" type="video/mp4">
+    <!-- FOOTER -->
+    <footer class="fixed-bottom text-white p-2" style="background-color: black;">
+      <div class="d-flex align-items-center justify-content-end gap-2 px-3">
+        <span style="font-size: x-small; color: #ddd;">powered by</span>
+        <img style="height: 24px;" src="img/thalesreistech.svg" alt="thalesreistech.com">
+      </div>
+    </footer>
+
+    <!-- OUTLET FOR DYNAMIC PROJECT MODALS -->
+    <div id="gallery-modals-outlet"></div>
+
+    <!-- MODAL: DEMO REEL -->
+    <div class="modal fade" id="modal_demoreel" tabindex="-1" aria-labelledby="label_demoreel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content theme-modal-body">
+          <div class="modal-header border-0 pb-0">
+            <h2 class="modal-title fs-4 text-light" id="label_demoreel">Demo reel</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-grow-1" data-bs-dismiss="modal" role="button"></div>
+              <div class="d-flex flex-column col-12 col-md-8 p-0">
+                <video class="img-fluid mx-auto d-block theme-modal-img my-4" autoplay muted loop controls playsinline>
+                  <source src="https://video.wixstatic.com/video/aaea0a_02d7118148054a6abb864eb9489c20be/1080p/mp4/file.mp4" type="video/mp4">
                   Your browser does not support the video tag.
-          </video>
-
-
-
-              
-          
-          </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-003" disabled></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film invisible"  href="#film-003"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images invisible" href="#img-003"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-001 -->
-<div class="modal fade" id="modal_proj-001"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <div id="3d" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title=""
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/ddfb3a4346514996bed79fd14ad9d30b/embed?ui_theme=dark"></iframe>
-            </div>
-          
-            
-            <!-- film -->
-              <div id="film" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-                <video
-                    class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-                    autoplay="autoplay"
-                    muted="muted"
-                    loop="loop"
-                    controls="controls">
-                    <source
-                        src="https://cdn.artstation.com/p/video_sources/000/883/920/zbrush-movie5.mp4"
-                        type="video/mp4">
-                        Your browser does not support the video tag.
                 </video>
-
-
-
-
-              <!-- images -->
-              <div id="img" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
               </div>
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdna.artstation.com/p/assets/images/images/055/960/092/small/manuela-reis-fix.jpg?1668118919"
-              alt="#4">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdnb.artstation.com/p/assets/images/images/051/661/839/small/manuela-reis-jedit-4.jpg?1657838576"
-              alt="#5">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdna.artstation.com/p/assets/images/images/051/689/246/small/manuela-reis-jedit-6.jpg?1657912123"
-              alt="#6">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdnb.artstation.com/p/assets/images/images/052/081/721/small/manuela-reis-j39.jpg?1658906663"
-              alt="#7">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdnb.artstation.com/p/assets/images/images/052/081/729/small/manuela-reis-j36.jpg?1658906679"
-              alt="#8">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdna.artstation.com/p/assets/images/images/052/615/470/small/manuela-reis-j53.jpg?1660238462"
-              alt="#9">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdna.artstation.com/p/assets/images/images/052/615/498/small/manuela-reis-j65.jpg?1660238511"
-              alt="#10">
-
-              <img
-              class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"
-              src="https://cdna.artstation.com/p/assets/images/images/052/615/508/small/manuela-reis-j67.jpg?1660238539"
-              alt="#11">
-          
+              <div class="d-flex flex-grow-1" data-bs-dismiss="modal" role="button"></div>
+            </div>
           </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+          <div class="modal-footer theme-menu-bg p-0" style="border: none;">
+            <div class="d-flex flex-row flex-grow-1 text-center p-0 fs-2">
+              <a role="button" class="flex-fill theme-menu-item bi bi-arrow-left-circle" data-bs-dismiss="modal"></a>
+            </div>
           </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d" href="#3d" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film" href="#film"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-002 -->
-<div class="modal fade" id="modal_proj-002"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+    <!-- MODAL: QR CODES -->
+    <div id="modal_qrcode_manuelareis" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-dark">Scan me</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <div id="3d-002" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title=""
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div>
-          
-            
-            <!-- film -->
-              <div id="film-002" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/212/858/manuelareis-horrorangel-video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-    
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/505/175/zbrush-justtheframe.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-
-
-
-
-              <!-- images -->
-              <div id="img-002" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_1495036a7b64463c84a66108aa1341ce~mv2.png/v1/fill/w_740,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aaea0a_1495036a7b64463c84a66108aa1341ce~mv2.png"      alt="#12">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdna.artstation.com/p/assets/images/images/042/138/944/medium/manuela-reis-oi-001.jpg?1633672275"      alt="#13">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdna.artstation.com/p/assets/images/images/042/138/942/medium/manuela-reis-oi.jpg?1633672267"      alt="#14"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdnb.artstation.com/p/assets/images/images/033/104/693/medium/manuela-reis-screenshot006.jpg?1608419401"      alt="#15">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdnb.artstation.com/p/assets/images/images/033/104/695/medium/manuela-reis-screenshot007.jpg?1608419407"      alt="16">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdna.artstation.com/p/assets/images/images/033/104/700/medium/manuela-reis-screenshot010.jpg?1608419427"      alt="#17">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdnb.artstation.com/p/assets/images/images/033/105/551/medium/manuela-reis-screenshot005.jpg?1608422852"      alt="#18">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdna.artstation.com/p/assets/images/images/033/104/702/medium/manuela-reis-screenshot011.jpg?1608419432"      alt="#19">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdna.artstation.com/p/assets/images/images/033/106/238/medium/manuela-reis-screenshot015.jpg?1608425363"      alt="#20">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdna.artstation.com/p/assets/images/images/033/104/598/medium/manuela-reis-screenshot007.jpg?1608418959"      alt="#21">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdnb.artstation.com/p/assets/images/images/033/105/185/medium/manuela-reis-horroangel-posed-m-horrorangel-body-basecolor.jpg?1608421241"      alt="#22">
-              <div class="d-flex flex-column align-items-center">
-                <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://cdnb.artstation.com/p/assets/images/images/033/104/715/medium/manuela-reis-horror-angel-by-forgess-kierstin-lapatka-fullview.jpg?1608419482"      alt="#23">
-                <div><span class="text-light">Concept by <a class="theme-menu-item" href="https://www.artstation.com/smogteeth" tabindex="_blank">Kierstin LaPatka</a></span></div>
-              </div> 
-          
+          <div class="modal-body d-flex justify-content-center p-4">
+            <img class="img-fluid col-8" src="img/qrcode_manuelareis.svg" alt="QR Code manuelareis.com">
           </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d" href="#3d-002" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film" href="#film-002"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-002"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-003 -->
-<div class="modal fade" id="modal_proj-003"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+    <div id="modal_qrcode_artstation" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-dark">Scan me</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-003" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div> -->
-
-            <!-- <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/ddfb3a4346514996bed79fd14ad9d30b/embed?ui_theme=dark"></iframe>
-            </div> -->
-          
-            
-            <!-- film -->
-              <div id="film-003" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source
-                  src="https://cdn.artstation.com/p/video_sources/000/207/323/v6-2.mp4"
-                  type="video/mp4">
-                  Your browser does not support the video tag.
-          </video>
-          <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source
-                  src="https://cdn.artstation.com/p/video_sources/000/207/325/v6-3.mp4"
-                  type="video/mp4">
-                  Your browser does not support the video tag.
-          </video>
-          <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source
-                  src="https://cdn.artstation.com/p/video_sources/000/207/327/v2.mp4"
-                  type="video/mp4">
-                  Your browser does not support the video tag.
-          </video>
-
-
-
-
-              <!-- images -->
-              <div id="img-003" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdnb.artstation.com/p/assets/images/images/053/003/359/medium/manuela-reis-bla-004.jpg?1661193141" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdna.artstation.com/p/assets/images/images/042/140/048/medium/manuela-reis-bla-001.jpg?1633676660" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdnb.artstation.com/p/assets/images/images/032/961/673/medium/manuela-reis-screenshot023.jpg?1607992866" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdnb.artstation.com/p/assets/images/images/032/961/687/medium/manuela-reis-screenshot007.jpg?1607992936" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdnb.artstation.com/p/assets/images/images/032/961/691/medium/manuela-reis-screenshot012.jpg?1607992942" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdna.artstation.com/p/assets/images/images/032/962/250/medium/manuela-reis-screenshot009.jpg?1607995151" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdna.artstation.com/p/assets/images/images/032/962/244/medium/manuela-reis-screenshot011.jpg?1607995143" alt="#4">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4"  src="https://cdnb.artstation.com/p/assets/images/images/032/961/657/medium/manuela-reis-screenshot015.jpg?1607992824" alt="#4">
-              
-              
-          
+          <div class="modal-body d-flex justify-content-center p-4">
+            <img class="img-fluid col-8" src="img/qrcode_artstation.svg" alt="QR Code Artstation">
           </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-003" disabled></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film" href="#film-003"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-003"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-004 -->
-<div class="modal fade" id="modal_proj-004"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+    <div id="modal_qrcode_sketchfab" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-dark">Scan me</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-004" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div>
-           -->
-            
-            <!-- film -->
-
-              <!-- <div id="film-004" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/212/858/manuelareis-horrorangel-video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-    
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/505/175/zbrush-justtheframe.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
- -->
-
-
-
-              <!-- images -->
-              <div id="img-004" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_2a5c593e3baf4fb98f635adb8e5a6551~mv2.jpg/v1/fill/w_740,h_495,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aaea0a_2a5c593e3baf4fb98f635adb8e5a6551~mv2.jpg "      alt="#12">
-          
+          <div class="modal-body d-flex justify-content-center p-4">
+            <img class="img-fluid col-8" src="img/qrcode_sketchfab.svg" alt="QR Code Sketchfab">
           </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-004" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film invisible" href="#film-004"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images invisible" href="#img-004"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-005 -->
-<div class="modal fade" id="modal_proj-005"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+    <div id="modal_qrcode_instagram" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-dark">Scan me</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-005" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div>
-           -->
-            
-            <!-- film -->
-
-               <div id="film-005" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://video.wixstatic.com/video/aaea0a_28cadb2cd904485a879ad22e7f4abfe0/1080p/mp4/file.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-    
- 
-
-
-
-              <!-- images -->
-              <div id="img-005" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_34d3c188887040eb98d9e90f9a67f819~mv2.png/v1/fill/w_671,h_1073,al_c,q_90,enc_auto/aaea0a_34d3c188887040eb98d9e90f9a67f819~mv2.png"      alt="#12">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_e2e85a50929d42e6bd34aab244c30273~mv2.png/v1/fill/w_740,h_1004,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/aaea0a_e2e85a50929d42e6bd34aab244c30273~mv2.png"      alt="#12">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_7aa407b9d01b41d9aef337c61844f091~mv2.png/v1/fill/w_725,h_1126,al_c,q_90,enc_auto/aaea0a_7aa407b9d01b41d9aef337c61844f091~mv2.png"      alt="#12">
-              
+          <div class="modal-body d-flex justify-content-center p-4">
+            <img class="img-fluid col-8" src="img/qrcode_instagram.svg" alt="QR Code Instagram">
           </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-005" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film" href="#film-005"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-005"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-006 -->
-<div class="modal fade" id="modal_proj-006"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
+    <div id="modal_qrcode_linkedin" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-dark">Scan me</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-006" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div> -->
-          
-            
-            <!-- film -->
-              <!-- <div id="film-006" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/212/858/manuelareis-horrorangel-video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-    
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/505/175/zbrush-justtheframe.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video> -->
-
-
-
-
-              <!-- images -->
-              <div id="img-006" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_eb95a08f87764fba9c386e8ebe45d659~mv2.png/v1/fill/w_740,h_656,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/aaea0a_eb95a08f87764fba9c386e8ebe45d659~mv2.png"      alt="#12">
-          
-          </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-006" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film invisible" href="#film-006"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-006"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-007 -->
-<div class="modal fade" id="modal_proj-007"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-007" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div>
-           -->
-            
-            <!-- film -->
-              <!-- <div id="film-007" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/212/858/manuelareis-horrorangel-video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-     -->
-    
-
-              <!-- images -->
-              <div id="img-007" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_44ebb86a18134796821621207916274f~mv2.png/v1/fill/w_740,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/aaea0a_44ebb86a18134796821621207916274f~mv2.png"      alt="#12"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_76e022e87eda41d0a19ae533e6413b06~mv2.png/v1/fill/w_740,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/aaea0a_76e022e87eda41d0a19ae533e6413b06~mv2.png"      alt="#12"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_2a9255c0491547d89acf972ffc83badd~mv2.png/v1/fill/w_1364,h_932,al_c,q_90/aaea0a_2a9255c0491547d89acf972ffc83badd~mv2.webp"      alt="#12"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_7a2fd5e03db643549e97ab833de4a5c5~mv2.png"      alt="#12"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_5b4d7067961748a1b9292bf7c8a37b54~mv2.png"      alt="#12"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_5041cf1bc500463691586c9f05491a9b~mv2.png"      alt="#12"> 
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_c365ff5c89804c87b0e51febdce42ad5~mv2.png"      alt="#12"> 
-              
-          
-          </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-007" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film invisible" href="#film-007"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-007"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-008 -->
-<div class="modal fade" id="modal_proj-008"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-008" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div>
-           -->
-            
-            <!-- film -->
-              <!-- <div id="film-008" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/212/858/manuelareis-horrorangel-video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-     -->
-              
-
-
-
-              <!-- images -->
-              <div id="img-008" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_e8ad839690e947c7838b14a599642ae1~mv2.jpg/v1/fill/w_740,h_851,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aaea0a_e8ad839690e947c7838b14a599642ae1~mv2.jpg"      alt="#12">
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_0bb96a7d800c44b69953a2f09fe56910~mv2_d_1215_1560_s_2.jpg/v1/fill/w_740,h_950,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aaea0a_0bb96a7d800c44b69953a2f09fe56910~mv2_d_1215_1560_s_2.jpg"      alt="#12">
-              
-          
-          </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-008" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film invisible" href="#film-008"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-008"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- modal_proj-009 -->
-<div class="modal fade" id="modal_proj-009"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen" >
-    <div class="modal-content theme-modal-body">
-      <!-- <div class="modal-header" style="border: none;">
-      </div> -->
-      <div class="modal-body">
-
-        <div class="d-flex flex-row">
-          
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-
-          <div class="d-flex flex-column col-12 col-md-8 mg-0 mg-md-0 p-0 p-md-0">
-
-            <!-- 3D -->
-            <!-- <div id="3d-009" class="mt-0 mt-md-0 mb-3 mb-md-3 theme-subtitle fs-2">
-              <i class="bi bi-badge-3d fs-1"></i>
-              <Span> Model</Span>
-            </div>
-
-            <div class="embed-responsive embed-responsive-16by9 theme-modal-img my-4 my-md-4" style="height: 50vh;">
-              <iframe
-              width="100%"
-              height="100%"
-              title="Elane"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              xr-spatial-tracking="xr-spatial-tracking"
-              execution-while-out-of-viewport="execution-while-out-of-viewport"
-              execution-while-not-rendered="execution-while-not-rendered"
-              web-share="web-share"
-              src="https://sketchfab.com/models/193720a4b5414c20bba099afcd0fac2a/embed?ui_theme=dark"></iframe>
-            </div> -->
-          
-            
-            <!-- film -->
-              <!-- <div id="film-009" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-film"></i>
-                <Span> Videos</Span>
-              </div>
-
-              <video
-              class="img-fluid mx-auto mx-md-auto theme-modal-img my-e my-md-4"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              controls="controls">
-              <source src="https://cdn.artstation.com/p/video_sources/000/212/858/manuelareis-horrorangel-video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-    
-  -->
-
-
-
-
-              <!-- images -->
-              <div id="img-009" class="mt-5 mt-md-5 pt-5 pt-md-5 mb-3 mb-md--3 theme-subtitle fs-2">
-                <i class="bi bi-images"></i>
-                <Span> Gallery</Span>
-              </div>
-
-              <img class="img-fluid mx-auto mx-md-auto d-block theme-modal-img my-e my-md-4" src="https://static.wixstatic.com/media/aaea0a_c8bbafd8ab78493fbc931e3458c9c74b~mv2.jpg"      alt="#12">
-          
-          </div>
-
-
-
-          <div class="d-flex flex-grow-1 mg-0 mg-md-0 p-0 p-md-0">
-            <a class="align-self-stretch flex-grow-1" style="background-color: fff;" data-dismiss="modal"></a>
-          </div>
-
-
-        </div>
-
-      </div>
-      <div class="modal-footer theme-menu-bg p-0 p-md-0 mg-0 mg-md-0" style="border: none">
-        <div class="d-flex flex-row flex-grow-1 text-center p-0 p-md-0 mg-0 mg-md-0 fs-2">
-          
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-badge-3d invisible" href="#3d-009" ></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-film invisible" href="#film-009"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-images" href="#img-009"></a>
-          <a role="button" class="flex-fill theme-menu-item p-0 p-md-0 mg-0 mg-md-0 bi bi-arrow-left-circle" data-dismiss="modal"></a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Published games -->
-    <div
-        id="strip_publishedgames"
-        class="d-flex flex-row justify-content-center py-5 py-md-5">
-
-        <div class="d-flex flex-column col-12 col-md-10 theme-strip-shadow">
-
-            <div
-                class="d-flex flex-row py-2 py-md-2 theme-strip-title fs-2 justify-content-center">
-                <i class="bi bi-controller theme-strip-title"></i>
-                <div class="mx-4 mx-md-4">Published Games</div>
-            </div>
-
-            <div
-                class="d-flex flex-row theme-strip-body fs-6 justify-content-center text-center">
-                <div class="d-flex flex-column py-5 py-md-5">
-                    
-                  <div class="d-flex flex-wrap justify-content-around mx-0 px-0 col-md-12 col-12 text-center mb-5 mb-md-5">
-
-                    <div class="col col-md-5 col-11 mg-0 mg-md-0 p-0 p-md-0 mt-3">
-                      <a href="https://store.steampowered.com/app/2121610/The_Events_at_Unity_Farm/" target="_blank" rel="noopener noreferrer">
-                        <img class="img-fluid" src="img/header_jpg_t=1686837177.webp" alt="">
-                      </a>  
-                    </div>
-    
-                    <div class="col col-md-5 col-11 mg-0 mg-md-0 p-0 p-md-0 mt-3">
-                      <a href="https://play.google.com/store/apps/details?id=com.funkidsapp.funkids&hl=en_CA&pli=1" target="_blank" rel="noopener noreferrer">
-                        <img class="img-fluid" src="img/298620253_507098951259971_2968673584041266772_n.webp" alt="">
-                      </a> 
-                    </div>
-    
-                  </div>                   
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- Published games -->
-
-
-
-
-
-
-
-
-
-
-    <!-- Services -->
-    <div
-        id="strip_services"
-        class="d-flex flex-row justify-content-center py-5 py-md-5">
-
-        <div class="d-flex flex-column col-12 col-md-10 theme-strip-shadow">
-
-            <div
-                class="d-flex flex-row py-2 py-md-2 theme-strip-title fs-2 justify-content-center">
-                <i class="bi bi-brush theme-strip-title"></i>
-                <div class="mx-4 mx-md-4">Services</div>
-            </div>
-
-            <div
-                class="d-flex flex-row theme-strip-body fs-6 justify-content-center">
-                <div class="d-flex flex-column py-5 py-md-5 col-10 col-md-10">
-                    
-                  <div class="row mx-0 px-0 pb-3 pb-md-3">
-
-                    <div class="d-flex justify-content-between flex-wrap">
-            
-                        <div class="fw-lighter fs-6 text-break my-4 my-md-4 col-12 col-md-12 px-3 px-md-4">
-                            Offering comprehensive art services encompassing meticulous planning, idea generation, adhering to scopes, and crafting exceptional characters and props tailored for gaming experiences.
-                        </div>
-
-                    </div>
-
-                    <div class="d-flex flex-row justify-content-between flex-wrap">                    
-            
-                      <div class="d-flex flex-column fw-lighter fs-6 text-break py-3 py-md-3 px-2 px-md-2 col-md-3">
-                        <img
-                              class="d-flex img-fluid col-4 col-md-4 mx-auto"
-                              src="img/cra_cri_icon.svg"
-                              alt="characters and creatures">
-                        <div class="d-flex fw-bolder fs-5 fs-md-5 mx-auto">Characters / Creatures</div> 
-                        <div class="d-flex mt-2 mt-md-2"> 
-                          initial sketching and sculpting to meticulous retopology and final product rendering or integration into games.
-                        </div>
-                      </div>
-                
-
-                      <div class="d-flex flex-column fw-lighter fs-6 text-break py-3 py-md-3 px-2 px-md-2 col-md-3">
-                        <img
-                              class="d-flex img-fluid col-4 col-md-4 mx-auto"
-                              src="img/props_icon.svg"
-                              alt="characters and creatures">
-                        <div class="d-flex fw-bolder fs-5 fs-md-5 mx-auto">Props / Assets</div> 
-                        <div class="d-flex mt-2 mt-md-2"> 
-                          Hard surfacing for characters such as robots, warriors, and more. Crafting props, assets, and captivating landscapes.
-                        </div>
-                      </div>
-
-                      <div class="d-flex flex-column fw-lighter fs-6 text-break py-3 py-md-3 px-2 px-md-2 col-md-3">
-                        <img
-                              class="d-flex img-fluid col-4 col-md-4 mx-auto"
-                              src="img/poster_ico.svg"
-                              alt="characters and creatures">
-                        <div class="d-flex fw-bolder fs-5 fs-md-5 mx-auto">Concepts / Posters</div> 
-                        <div class="d-flex mt-2 mt-md-2"> 
-                          Delivering art concepts for diverse platforms including social media, forums, events, and beyond, ensuring engaging visuals that captivate audiences.      
-                        </div>
-                      </div>
-
-
-                    </div>
-            
-                  </div>
-                  
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- Services -->
-
-
-
-
-
-
-
-
-
-
-    <!-- About -->
-    <div
-        id="strip_aboutme"
-        class="d-flex flex-row justify-content-center py-5 py-md-5">
-
-        <div class="d-flex flex-column col-12 col-md-10 theme-strip-shadow">
-
-            <div
-                class="d-flex flex-row py-2 py-md-2 theme-strip-title fs-2 justify-content-center">
-                <i class="bi bi-person-vcard theme-strip-title"></i>
-                <div class="mx-4 mx-md-4">About</div>
-            </div>
-
-            <div
-                class="d-flex flex-row theme-strip-body fs-6">
-
-                <div
-                class="d-flex flex-row theme-strip-body fs-6 justify-content-center">
-                <div class="d-flex flex-column py-5 py-md-5 col-10 col-md-10">
-
-                <div class="d-flex flex-wrap pb-5 pb-md-5 pt-2 pt-md-2">
-                    
-                <div class="fw-bolder fs-4 my-4 my-md-4 col-12 col-md-12 px-3 px-md-4 theme-strip-title">PROFESSIONAL XP</div>
-
-                <div
-                    class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 text-light col-md-6">
-                    <div class="fw-bolder fs-4 theme-strip-h1">Character Artist</div>
-                    <div class="fs-5" style="color: #ccc">TITAN1STUDIO, Toronto, Canada</div>
-                    <div>
-                        Creating human characters and creatures for 3D VR games. Understanding all the
-                        creation process for hair, clothes, and blend shapes for facial expressions.
-                        Being able to make changes and follow the art Director's feedback.
-                    </div>
-                </div>
-
-                <div
-                    class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                    <div class="fw-bolder fs-4 theme-strip-h1">Game Designer / Developer</div>
-                    <div class="fs-5" style="color: #ccc">FUNKIDS</div>
-                    <div>
-                        Improving games for kids, designing and devoloping new games that improves
-                        children skills.
-                    </div>
-                </div>
-
-                <div
-                class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                <div class="fw-bolder fs-4 theme-strip-h1">Game Artist / Game Developer</div>
-                    <div class="fs-5" style="color: #ccc">Avido</div>
-                    <div>
-                        Multiple roles in this indie company: planning the structure of the projects,
-                        managing development time and team, 2d animations and UI/UX
-                    </div>
-                </div>
-
-                <div
-                class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                <div class="fw-bolder fs-4 theme-strip-h1">Volunteered</div>
-                    <div class="fs-5" style="color: #ccc">WomanUp</div>
-                    <div>
-                        A non-profit company that helps woman join game industry. Lectured in Google
-                        Campus.
-                    </div>
-                </div>
-
-                <div class="fw-bolder fs-4 my-4 my-md-4 col-12 col-md-12 px-3 px-md-4 theme-strip-title">EDUCATION</div>
-
-                <div
-                class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                <div class="fw-bolder fs-4 theme-strip-h1">Major in Game Art</div>
-                    <div class="fs-5">Centennial College, Toronto, Canada</div>
-                    <div class="fs-5">2019/2020</div>
-                    <div class="fs-6"></div>
-                </div>
-
-                <div
-                class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                <div class="fw-bolder fs-4 theme-strip-h1">Digital Sculpture</div>
-                    <div class="fs-5">Melies - Digital Art College, São Paulo, Brazil</div>
-                    <div class="fs-5">2016</div>
-                    <div class="fs-6"></div>
-                </div>
-
-                <div
-                class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                <div class="fw-bolder fs-4 theme-strip-h1">Major in Digital Games</div>
-                    <div class="fs-5">Cruzeiro do Sul University, São Paulo, Brazil</div>
-                    <div class="fs-5">2013-2015</div>
-                    <div class="fs-6">
-                        I learned about logic, physics, and math for games, game coding, 3D modeling,
-                        animation for games, Unity 3D, and Blender.
-                    </div>
-                </div>
-
-                <div
-                class="fw-lighter fs-6 text-break py-3 py-md-3 px-3 px-md-4 col-md-6">
-                <div class="fw-bolder fs-4 theme-strip-h1">Saga - School of Art</div>
-                    <div class="fs-5">São Paulo, Brazil</div>
-                    <div class="fs-5">2010-2013</div>
-                    <div class="fs-6">
-                        Studies in Game Animation, and Adobe softwares as Photoshop, Illustrator, Flash,
-                        Dreamweaver, Premiere, and After Effects. I also learned Digital Painting and 3D
-                        modeling and animation using Autodesk Maya.
-                    </div>
-                </div>
-                  
-                </div>
-            </div>
-
+          <div class="modal-body d-flex justify-content-center p-4">
+            <img class="img-fluid col-8" src="img/qrcode_linkedin.svg" alt="QR Code LinkedIn">
           </div>
         </div>
       </div>
-
     </div>
-    <!-- About -->
 
-
-
-
-
-   <!-- LINK / CONTACT -->
-   <div class="d-flex flex-row justify-content-center p-0 mg-0">
-
-  <div class="d-flex flex-wrap justify-content-between col-12 col-md-10 py-5 py-md-5 ">
-
-
-    <!-- Links -->
-    <div
-        id="strip_links"
-        class="d-flex flex-column justify-content-center col-12 col-md-6 py-5 py-md-5">
-
-        <div class="d-flex flex-column theme-strip-shadow">
-
-            <div
-                class="d-flex flex-row py-2 py-md-2 theme-strip-title fs-2 justify-content-center">
-                <i class="bi bi-link theme-strip-title"></i>
-                <div class="mx-4 mx-md-4">Links</div>
-            </div>
-
-            <div class="d-flex flex-row theme-strip-body fs-6 justify-content-center">
-
-                <div class="d-flex flex-column col-12 col-md-10 px-5">
-
-                      <div class="d-flex flex-row flex-grow-1 p-2">
-                        <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none bi bi-globe2 text-truncate" href="https://www.manuelareis.com/" target="_blank"><span class="px-2 mx-2">manuelareis.com</span></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-person-plus invisible" href="https://www.manuelareis.com/" target="_blank" title="follow me"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill"  onclick="share('https://www.manuelareis.com/', 'https://www.manuelareis.com/', 'https://www.manuelareis.com/')"  title="share"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code"     data-toggle="modal" data-target="#modal_qrcode_manuelareis"  title="scan QR code"></a>
-                      </div>
-
-                      <div class="d-flex flex-row flex-grow-1 p-2">
-                        <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none bi bi-instagram" href="https://www.instagram.com/manuelareis.art/" target="_blank"><span class="px-2 mx-2">Instagram</span></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-person-plus" href="https://www.instagram.com/manuelareis.art/?follow" target="_blank"  title="follow me"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill"  onclick="share('https://www.instagram.com/manuelareis.art', 'instagram', 'manuelareis.art')"  title="share"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code"     data-toggle="modal" data-target="#modal_qrcode_instagram" title="scan QR code"></a>
-                      </div>
-
-                      <div class="d-flex flex-row flex-grow-1 p-2">
-                        <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none bi bi-linkedin" href="https://www.linkedin.com/in/manuelamreis/" target="_blank"><span class="px-2 mx-2">Linkedin</span></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-person-plus" href="https://www.linkedin.com/in/manuelamreis/" target="_blank" title="follow me"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill"  onclick="share('https://www.linkedin.com/in/manuelamreis/', 'linkedin', 'manuelamreis')"  title="share"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code"     data-toggle="modal" data-target="#modal_qrcode_linkedin"  title="scan QR code"></i></a>
-                      </div>
-
-                      <div class="d-flex flex-row flex-grow-1 p-2">
-                        <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none" href="https://www.artstation.com/manuelareis/" target="_blank"><span><svg viewBox="0.09 0.31 799.44 700.63" xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path d="M.09 540.65l67.25 115.89c13.6 26.34 40.8 44.4 71.78 44.4H587.2l-92.18-160.29zm799.44.75c0-15.81-4.54-30.86-12.85-43.65L523.73 43.21C510.13 17.62 483.68.31 452.7.31H313.67l405.76 699.88 64.23-110.63c12.09-21.07 15.87-30.1 15.87-48.16zM428.52 426.26L247.18 113.95 65.83 426.26z" fill="#6c757d"/></svg></span><span class="px-2 mx-2">Artstation</span></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-person-plus" href="https://www.artstation.com/manuelareis/following" target="_blank" title="follow me"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill"  onclick="share('https://www.artstation.com/manuelareis', 'artstation', 'manuelareis')"  title="share"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code"     data-toggle="modal" data-target="#modal_qrcode_artstation"  title="scan QR code"></i></a>
-                      </div>
-
-                      <div class="d-flex flex-row flex-grow-1 p-2">
-                        <a class="d-flex flex-grow-1 theme-menu-item text-decoration-none" href="https://www.sketchfab.com/Manuela.Reis/" target="_blank"><span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path d="m1000 69c-515.52 0-933.28 417.84-933.28 933.24s417.76 933.29 933.28 933.29 933.36-417.89 933.36-933.29-417.84-933.24-933.36-933.24z" fill="none"/><path d="m1000 0c-552.32 0-1000 447.72-1000 1000s447.68 1000 1000 1000 1000-447.72 1000-1000-447.6-1000-1000-1000zm-86.88 1595.07-431.12-248.86v-502l431.12 232.79zm76.8-636.19-510.08-270.38 510.08-294.5 510.16 294.5zm510.48 388.29-429.52 248v-516.17l429.52-232z" fill="#6c757d"/></svg></span><span class="px-2 mx-2">Sketchfab</span></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-person-plus" href="https://www.sketchfab.com/Manuela.Reis/followers" target="_blank" title="follow me"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-share-fill"  onclick="share('https://sketchfab.com/Manuela.Reis/', 'sketchfab', 'Manuela.Reis')"  title="share"></a>
-                        <a class="px-2 theme-menu-item text-decoration-none bi bi-qr-code"     data-toggle="modal" data-target="#modal_qrcode_sketchfab"  title="scan QR code"></i></a>
-                      </div>
-                
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div id="modal_qrcode_manuelareis" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content" style="background-color: #fff;">
-                    <div class="modal-header">
-                        <h5 class="modal-title" style="color: #000;">Scan me</h5>
-                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex justify-content-center align-items-center">
-                        <div class="col col-md-10 col-10">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <img
-                                    class="img-fluid col-md-6"
-                                    src="img/qrcode_manuelareis.svg"
-                                    alt="qrcode_manuelareis.svg"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modal_qrcode_artstation" class="modal fade" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="background-color: #fff;">
-                        <div class="modal-header">
-                            <h5 class="modal-title" style="color: #000;">Scan me</h5>
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center align-items-center">
-                            <div class="col col-md-10 col-10">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img
-                                        class="img-fluid col-md-6"
-                                        src="img/qrcode_artstation.svg"
-                                        alt="qrcode_artstation.svg"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="modal_qrcode_sketchfab" class="modal fade" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content" style="background-color: #fff;">
-                            <div class="modal-header">
-                                <h5 class="modal-title" style="color: #000;">Scan me</h5>
-                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body d-flex justify-content-center align-items-center">
-                                <div class="col col-md-10 col-10">
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img
-                                            class="img-fluid col-md-6"
-                                            src="img/qrcode_sketchfab.svg"
-                                            alt="qrcode_sketchfab.svg"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="modal_qrcode_instagram" class="modal fade" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content" style="background-color: #fff;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" style="color: #000;">Scan me</h5>
-                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body d-flex justify-content-center align-items-center">
-                                    <div class="col col-md-10 col-10">
-                                        <div class="d-flex justify-content-center align-items-center">
-                                            <img
-                                                class="img-fluid col-md-6"
-                                                src="img/qrcode_instagram.svg"
-                                                alt="qrcode_instagram.svg"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="modal_qrcode_linkedin" class="modal fade" tabindex="-1">
-                            <div class="modal-dialog">
-                                <div class="modal-content" style="background-color: #fff;">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" style="color: #000;">Scan me</h5>
-                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex justify-content-center align-items-center">
-                                        <div class="col col-md-10 col-10">
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <img
-                                                    class="img-fluid col-md-6"
-                                                    src="img/qrcode_linkedin.svg"
-                                                    alt="qrcode_linkedin.svg"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-    </div>
-    <!-- Links -->
-
-  
-  
-  
-
-    <!-- Contact -->
-    <div
-        id="strip_contact"
-        class="d-flex flex-column justify-content-center align-self-start col-12 col-md-5 py-5 py-md-5">
-
-        <div class="d-flex flex-column theme-strip-shadow">
-
-            <div
-                class="d-flex flex-row py-2 py-md-2 theme-strip-title fs-2 justify-content-center">
-                <i class="bi bi-envelope theme-strip-title"></i>
-                <div class="mx-4 mx-md-4">Contact</div>
-            </div>
-
-            <div
-                class="d-flex flex-row theme-strip-body fs-6 justify-content-center text-center">
-                <div class="d-flex flex-column py-5 py-md-5">
-                    <div class="p-2 p-md-2">
-                        manuelareis.art@gmail.com
-                    </div>
-                    <div class="p-3 p-md-3">
-                        <a class="bi bi-send fs-2 theme-menu-item" href="mailto:manuelareis.art@gmail.com"></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- Contact -->
-
-    
-     </div>
-   </div>
-
-
-
-
-
-
-
-
-
-    <!-- FOOTER --> 
-    <div
-        class="fixed-bottom text-white p-2 p-md-2"
-        style="background-color: black;">
-        <div class="hstack gap-2">
-            <div class="ms-auto" style="font-size: x-small; color: #ddd;">
-              powered by
-            </div>
-            <img
-                class="col col-2 col-md-1"
-                src="img\thalesreistech.svg"
-                alt="thalesreistech.com">
-            </div>
-        </div>
-      <!-- FOOTER -->
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- FRAMEWORKS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"                          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js/functions.js"></script>
-
-
-
-
-
+    <!-- Bootstrap 5.3.3 Bundle (Includes Popper, No jQuery needed) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
